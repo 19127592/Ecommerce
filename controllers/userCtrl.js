@@ -84,7 +84,7 @@ const userCtrl = {
             var hashLogin = crypto.createHash('md5').update(password).digest('hex');
             //const isMatch = await bcrypt.compare(password, user.password)
             if (hashLogin != user.password) return res.status(400).json({ msg: "Incorrect password" })
-                //If login success, create access token and refresh token
+            //If login success, create access token and refresh token
             const accesstoken = createAccessToken({ id: user._id })
             const refreshtoken = createRefreshToken({ id: user._id })
             res.cookie('refreshtoken', refreshtoken, {
