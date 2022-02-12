@@ -1,10 +1,6 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 import React, { useState, useContext } from "react";
-import {GlobalState} from '../../../../../GlobalState'
+import { GlobalState } from "../../../../../GlobalState";
 export default function Purchased() {
-    return (
-        <div>
-            Purchased Components
-        </div>
-    )
+  return <div>Purchased Components test</div>;
 }

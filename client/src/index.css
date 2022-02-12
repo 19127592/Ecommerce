@@ -35,3 +35,8 @@ button {
   cursor: pointer;
 }
 
+/*---------Header------------*/
+@import url("./components/header/header.css");
+
+/*---------Order------------*/
+@import url("./components/mainpage/Account/Order/Purchased/purchase.css");
