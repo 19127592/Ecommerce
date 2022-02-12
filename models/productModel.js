@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema(
   {
-    seller:{
-      type: String,
-      require: true,
-    },
     product_id: {
       type: String,
       require: true,
@@ -18,13 +14,13 @@ const productSchema = new mongoose.Schema(
       type: Number,
       require: true,
     },
-    description: {
+    brand: {
       type: String,
       require: true,
     },
-    content: {
-      type: String,
-      require: true,
+    maintenance_time:{
+      type: Nnmber,
+      requrire: true
     },
     images: {
       type: Object,
@@ -34,16 +30,13 @@ const productSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    checked: {
-      type: Boolean,
-      default: false,
-    },
     sold: {
       type: Number,
       default: 0,
     },
-    brand: {
+    color:{
       type: String,
+      default: Black
     },
     //Detail
     CPU: {
@@ -55,20 +48,8 @@ const productSchema = new mongoose.Schema(
     RAM: {
       type: String,
     },
-    Bluetooth:{
-      type: Number,
-    },
-    OS:{
-      type: String,
-    },
     GPU:{
       type: String,
-    },
-    DoR: {
-      type: Date,
-    },
-    BatteryCapacity:{
-      type: Number,
     },
     Weight:{
       type: Number,
@@ -76,6 +57,19 @@ const productSchema = new mongoose.Schema(
     Material:{
       type: String
     },
+    DataStorage:{
+      type: String
+    },
+    Case:{
+      type: String
+    },
+    ConnectionType:{
+      type: String
+    },
+    Led:{
+      type: Boolean,
+      defalut: false
+    }
   },
   {
     timestamps: true,
