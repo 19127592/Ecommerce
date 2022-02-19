@@ -38,5 +38,17 @@ button {
 /*---------Header------------*/
 @import url("./components/header/header.css");
 
+/*---------Home Page------------*/
+@import url("./components/mainpage/HomePage/HomePage.css");
+
+/*---------Authentication------------*/
+@import url("./components/mainpage/Account/Authentication/Authentication.css");
+
+/*---------Product Detail------------*/
+@import url("./components/mainpage/ProductDetail/ProductDetail.css");
+
 /*---------Order------------*/
 @import url("./components/mainpage/Account/Order/Purchased/purchase.css");
+
+/*---------Product Box UI------------*/
+@import url("./components/mainpage/HomePage/ProductBoxUI/ProductBoxUI.css");

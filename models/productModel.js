@@ -18,10 +18,6 @@ const productSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
-    maintenance_time:{
-      type: Nnmber,
-      requrire: true
-    },
     images: {
       type: Object,
       require: true,
@@ -30,13 +26,13 @@ const productSchema = new mongoose.Schema(
       type: String,
       require: true,
     },
+    maintenance_time:{
+      type: Number,
+      requrire: true
+    },
     sold: {
       type: Number,
       default: 0,
-    },
-    color:{
-      type: String,
-      default: Black
     },
     //Detail
     CPU: {
@@ -51,24 +47,58 @@ const productSchema = new mongoose.Schema(
     GPU:{
       type: String,
     },
-    Weight:{
-      type: Number,
-    },
     Material:{
       type: String
     },
     DataStorage:{
       type: String
     },
-    Case:{
-      type: String
-    },
     ConnectionType:{
       type: String
     },
-    Led:{
+    Weight:{
+      type: String,
+    },
+    Color:{
+      type: String,
+    },
+    //Monitor
+    Panel:{
+      type: String,
+    },
+    Resolution:{
+      type: String,
+    },
+    RefreshRate:{
+      type: String,
+    },
+    Response:{
+      type: String,
+    },
+    TechSync:{
+      type: String,
+    },
+    Bright:{
+      type: String,
+    },
+    Contrast:{
+      type: String,
+    },
+    //Keyboard
+    Switch:{
+      type: String,
+    },
+    RGB:{
       type: Boolean,
-      defalut: false
+      default: false
+    },
+    //Headphone
+    Type:{
+      type: String,
+    },
+    //Mouse
+    DPI:{
+      type: String,
     }
   },
   {

@@ -24,6 +24,11 @@ import Checkout from './Cart/Checkout'
 import Purchased from './Account/Order/Purchased/Purchased'
 import Pending from './Account/Order/Pending/Pending'
 
+//Admin
+import ModifyProduct from './Admin/HandleProduct/ModifyProduct'
+
+//Other
+import NotFound from './Other/NotFound/NotFound';
 export default function Path() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
@@ -53,10 +58,9 @@ export default function Path() {
             <Route path='/account/order/pending' element={<Pending/>}/>
 
 
-            <Route path='/user-management' element/>
-            <Route path='/product-management' element/>
-            <Route path='/product-management/create-product' element/>
+            <Route path='/admin/modify-product' element={<ModifyProduct/>}/>
             
+            <Route path="*" element={<NotFound/>} />
         </Routes>
     )
 }
