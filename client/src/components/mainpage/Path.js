@@ -1,5 +1,5 @@
 import React, {useContext} from 'react'
-import {Routes,Route} from 'react-router-dom'
+import {Switch,Route} from 'react-router-dom'
 import { GlobalState } from "../../GlobalState";
 //Products
 import HomePage from './HomePage/HomePage'
@@ -34,33 +34,33 @@ export default function Path() {
     const [isLogged] = state.userAPI.isLogged
 
     return (
-        <Routes>
-            <Route path='/' element={<HomePage/>}/>
-            <Route path='/products/:id' element={<ProductDetail/>}/>
+        <Switch>
+            <Route path='/' exact component={HomePage}/>
+            <Route path='/products/:id' exact component={ProductDetail}/>
 
 
-            <Route path='/account/login' element={<Login/>}/>
-            <Route path='/account/register' element={<Register/>}/>
+            <Route path='/account/login' exact component={Login}/>
+            <Route path='/account/register' exact component={Register}/>
 
 
-            <Route path='/account' element={<User/>}/>
+            <Route path='/account' exact component={User}/>
 
 
-            <Route path='/account/forgot-password' element={<ForgotPass/>}/> //Cannot Login
-            <Route path='/account/change-password' element={<ChangePass/>}/> //Can Login
+            <Route path='/account/forgot-password' exact component={ForgotPass}/> //Cannot Login
+            <Route path='/account/change-password' exact component={ChangePass}/> //Can Login
 
 
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/checkout' element={<Checkout/>}/>
+            <Route path='/cart' exact component={Cart}/>
+            <Route path='/checkout' exact component={Checkout}/>
 
 
-            <Route path='/account/order/history' element={<Purchased/>}/>
-            <Route path='/account/order/pending' element={<Pending/>}/>
+            <Route path='/account/order/history' exact component={Purchased}/>
+            <Route path='/account/order/pending' exact component={Pending}/>
 
 
-            <Route path='/admin/modify-product' element={<ModifyProduct/>}/>
+            <Route path='/admin/modify-product' exact component={ModifyProduct}/>
             
-            <Route path="*" element={<NotFound/>} />
-        </Routes>
+            <Route path="*" exact component={NotFound} />
+        </Switch>
     )
 }

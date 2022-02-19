@@ -6,7 +6,8 @@ export default function Homepage() {
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
     const [search, setSearch] = state.productsAPI.search
-    
+    const [users] = state.userAPI.users
+    console.log(users)
     return (
         <>
         // Laptop
