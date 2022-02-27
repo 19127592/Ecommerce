@@ -23,7 +23,9 @@ export default function Header() {
     localStorage.clear();
     window.location.href = "/";
   };
-
+  const modifyQuery = (str) => {
+    return str.toLowerCase().trim().split(/\s+/).join('+');
+}
   const [infor, setInfor] = state.userAPI.infor;
 
   const loggedControl = () => {
@@ -167,7 +169,7 @@ export default function Header() {
         </h1>
       </div>
       <div class="search-box">
-        <form onSubmit={Search}>
+        <form onSubmit={Search} action={'/search/' + modifyQuery(search)}>
           <input
             type="text"
             name=""

@@ -52,3 +52,6 @@ button {
 
 /*---------Product Box UI------------*/
 @import url("./components/mainpage/HomePage/ProductBoxUI/ProductBoxUI.css");
+
+/*---------Cart------------*/
+@import url("./components/mainpage/Cart/Cart.css");

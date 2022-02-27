@@ -29,6 +29,8 @@ import ModifyProduct from './Admin/HandleProduct/ModifyProduct'
 
 //Other
 import NotFound from './Other/NotFound/NotFound';
+import Search from './Search/Search'
+
 export default function Path() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
@@ -59,6 +61,8 @@ export default function Path() {
 
 
             <Route path='/admin/modify-product' exact component={ModifyProduct}/>
+
+            <Route path="/search/:id" exact component={Search}/>
             
             <Route path="*" exact component={NotFound} />
         </Switch>
