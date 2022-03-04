@@ -176,7 +176,7 @@ export default function Header() {
             placeholder="Search..."
             className="search-field"
             value={search}
-            onChange={(e) => setSearch(e.target.value.toLowerCase())}
+            onChange={(e) => setSearch(e.target.value)}
           />
         </form>
       </div>

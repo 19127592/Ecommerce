@@ -55,3 +55,5 @@ button {
 
 /*---------Cart------------*/
 @import url("./components/mainpage/Cart/Cart.css");
+
+@import url("./components/mainpage/Checkout/Checkout.css");

@@ -18,7 +18,7 @@ import ChangePass from './Account/PasswordChange/Change'
 
 //Shopping
 import Cart from './Cart/Cart'
-import Checkout from './Cart/Checkout'
+import Checkout from './Checkout/Checkout'
 
 //Order
 import Purchased from './Account/Order/Purchased/Purchased'

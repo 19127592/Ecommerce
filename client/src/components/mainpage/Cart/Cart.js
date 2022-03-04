@@ -68,7 +68,9 @@ export default function Cart() {
                 </div>
             </div>
         </div>
-        
+        <Link to="/checkout">
+          <input type="submit" value="Continue to checkout" class="checkout" />
+        </Link>
         </>
     )
 }
