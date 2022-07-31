@@ -31,6 +31,8 @@ import ModifyProduct from './Admin/HandleProduct/ModifyProduct'
 import NotFound from './Other/NotFound/NotFound';
 import Search from './Search/Search'
 
+import products from './HomePage/Products/products'
+
 export default function Path() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
@@ -40,13 +42,10 @@ export default function Path() {
             <Route path='/' exact component={HomePage}/>
             <Route path='/products/:id' exact component={ProductDetail}/>
 
-
             <Route path='/account/login' exact component={Login}/>
             <Route path='/account/register' exact component={Register}/>
 
-
             <Route path='/account' exact component={User}/>
-
 
             <Route path='/account/forgot-password' exact component={ForgotPass}/> //Cannot Login
             <Route path='/account/change-password' exact component={ChangePass}/> //Can Login
@@ -63,6 +62,8 @@ export default function Path() {
             <Route path='/admin/modify-product' exact component={ModifyProduct}/>
 
             <Route path="/search/:id" exact component={Search}/>
+
+            <Route path='/collection/:id' exact component={products}/>
             
             <Route path="*" exact component={NotFound} />
         </Switch>

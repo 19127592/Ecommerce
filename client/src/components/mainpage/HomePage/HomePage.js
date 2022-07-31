@@ -1,13 +1,13 @@
 import React,{useContext,useState} from 'react'
 import {GlobalState} from '../../../GlobalState'
 import ProductItem from './ProductBoxUI/ProductItem'
-
+import { Link } from "react-router-dom";
 export default function Homepage() {
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
     const [search, setSearch] = state.productsAPI.search
     const [users] = state.userAPI.users
-    console.log(users)
+    console.log(products)
     return (
         <>
         // Laptop
@@ -15,11 +15,14 @@ export default function Homepage() {
             {
                 products.map(product => {
                     if (product.category == 'laptop'){
+                        console.log(product)
                         return <ProductItem key={product._id} product={product}/>
                     }
                     
                 })
+                
             }
+            <Link to="/collection/laptop">Xem thêm</Link>
         </div>
         // PC
         <div className='products'>
@@ -31,6 +34,7 @@ export default function Homepage() {
                     
                 })
             }
+            <Link to="/collection/pc">Xem thêm</Link>
         </div>
         // Monitor
         <div className='products'>

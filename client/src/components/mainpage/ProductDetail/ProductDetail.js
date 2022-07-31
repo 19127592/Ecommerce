@@ -13,6 +13,7 @@ export default function ProductDetail() {
     const state = useContext(GlobalState)
     const [products] = state.productsAPI.products
     const [ProductDetail,setProductDetail] = useState(initialState)
+    const addToCart = state.userAPI.addToCart
     const priceWithCommas = (price) => {
         var parts = price.toString().split(".");
         parts[0]=parts[0].replace(/\B(?=(\d{3})+(?!\d))/g,".");
@@ -38,7 +39,11 @@ export default function ProductDetail() {
     useEffect(() => {
         if(params.id){
             products.forEach(product => {
-                if(removeAccent(product.title) === params.id) {setProductDetail(product)}
+                if(removeAccent(product.title) === params.id)
+                {
+                    {setProductDetail(product)}
+                    console.log(product)
+                }
             })
         }
     },[params.id,products])
@@ -150,7 +155,9 @@ export default function ProductDetail() {
                 <div>Thương hiệu: {ProductDetail.brand}</div>
                 <div>Bảo hành: {ProductDetail.maintenance_time} tháng</div>
                 {productDetail()}
+                <Link id="btn-buy" to="/" onClick={() => addToCart(ProductDetail)}>Buy</Link>
             </div>
         )
     }
+    
 }

@@ -147,7 +147,7 @@ export default function Header() {
           <Link to="/user-management">User Management</Link>
         </li>
         <li>
-          <Link to="/product-management">Product Management</Link>
+          <Link to="/admin/modify-product">Product Management</Link>
         </li>
       </>
     );
