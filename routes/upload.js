@@ -31,7 +31,7 @@ router.post('/upload', (req, res) => {
         }
         // @ts-ignore
         //cloudinary.uploader.upload(file.tempFilePath, { folder: `test/${file.name}` }, async(err, result) => {
-        cloudinary.uploader.upload(file.tempFilePath, { folder: `test` }, async(err, result) => {
+        cloudinary.uploader.upload(file.tempFilePath, { folder: `EC107` }, async(err, result) => {
             if (err) throw err
                 // @ts-ignore
             removeTmp(file.tempFilePath)

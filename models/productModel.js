@@ -34,72 +34,10 @@ const productSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    //Detail
-    CPU: {
+    description: {
       type: String,
+      require: true
     },
-    Screen:{
-      type: String,
-    },
-    RAM: {
-      type: String,
-    },
-    GPU:{
-      type: String,
-    },
-    Material:{
-      type: String
-    },
-    DataStorage:{
-      type: String
-    },
-    ConnectionType:{
-      type: String
-    },
-    Weight:{
-      type: String,
-    },
-    Color:{
-      type: String,
-    },
-    //Monitor
-    Panel:{
-      type: String,
-    },
-    Resolution:{
-      type: String,
-    },
-    RefreshRate:{
-      type: String,
-    },
-    Response:{
-      type: String,
-    },
-    TechSync:{
-      type: String,
-    },
-    Bright:{
-      type: String,
-    },
-    Contrast:{
-      type: String,
-    },
-    //Keyboard
-    Switch:{
-      type: String,
-    },
-    RGB:{
-      type: Boolean,
-      default: false
-    },
-    //Headphone
-    Type:{
-      type: String,
-    },
-    //Mouse
-    DPI:{
-      type: String,
-    }
   },
   {
     timestamps: true,

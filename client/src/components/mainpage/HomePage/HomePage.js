@@ -10,11 +10,11 @@ export default function Homepage() {
     console.log(products)
     return (
         <>
-        // Laptop
+        <div>DÁN MÀN HÌNH</div>
         <div className='products'>
             {
                 products.map(product => {
-                    if (product.category == 'laptop'){
+                    if (product.category == 'screen protector'){
                         console.log(product)
                         return <ProductItem key={product._id} product={product}/>
                     }
@@ -22,63 +22,59 @@ export default function Homepage() {
                 })
                 
             }
-            <Link to="/collection/laptop">Xem thêm</Link>
         </div>
-        // PC
+        <div><Link to="/collection/screen protector">Xem thêm</Link></div>
+
+        <div>CÁP, SẠC ĐIỆN THOẠI</div>
         <div className='products'>
             {
                 products.map(product => {
-                    if (product.category == 'pc'){
-                        return <ProductItem key={product._id} product={product}/>
-                    }
-                    
-                })
-            }
-            <Link to="/collection/pc">Xem thêm</Link>
-        </div>
-        // Monitor
-        <div className='products'>
-            {
-                products.map(product => {
-                    if (product.category == 'monitor'){
+                    if (product.category == 'phone charger'){
                         return <ProductItem key={product._id} product={product}/>
                     }
                     
                 })
             }
         </div>
-        // Keyboard
+        <div><Link to="/collection/phone charger">Xem thêm</Link></div>
+
+        <div>PIN DỰ PHÒNG</div>
         <div className='products'>
             {
                 products.map(product => {
-                    if (product.category == 'keyboard'){
+                    if (product.category == 'backup charger'){
                         return <ProductItem key={product._id} product={product}/>
                     }
                     
                 })
             }
         </div>
-        // Headphone
+        <div><Link to="/collection/backup charger">Xem thêm</Link></div>
+
+        <div>TAI NGHE</div>
         <div className='products'>
             {
                 products.map(product => {
                     if (product.category == 'headphone'){
                         return <ProductItem key={product._id} product={product}/>
                     }
-                })
-            }
-        </div>
-        // Mouse
-        <div className='products'>
-            {
-                products.map(product => {
-                    if (product.category == 'mouse'){
-                        return <ProductItem key={product._id} product={product}/>
-                    }
                     
                 })
             }
         </div>
+        <div><Link to="/collection/headphone">Xem thêm</Link></div>
+
+        <div>ỐP LƯNG</div>
+        <div className='products'>
+            {
+                products.map(product => {
+                    if (product.category == 'phone case'){
+                        return <ProductItem key={product._id} product={product}/>
+                    }
+                })
+            }
+        </div>
+        <div><Link to="/collection/phone case">Xem thêm</Link></div>
         </>
     )
 }

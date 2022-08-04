@@ -163,6 +163,7 @@ export default function Header() {
       </div>
       <div className="logo">
         <h1>
+          
           <Link to="/">
             {isAdmin ? "Admin" : "rookieSE"}
           </Link>
@@ -191,7 +192,7 @@ export default function Header() {
         }
         <li>
           <img src={Close} alt="" width="30" className="menu" />
-          <div className="icon">
+          <div className="icon_1">
             <div className="cart-icon">
               <span>{cart.length}</span>
               <Link to="/cart">

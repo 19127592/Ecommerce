@@ -72,28 +72,8 @@ const productCtrl = {
         brand,
         images,
         category,
-        maintenance_time,
-        sold,
-        CPU,
-        Screen,
-        RAM,
-        GPU,
-        Material,
-        DataStorage,
-        ConnectionType,
-        Weight,
-        Color,
-        Panel,
-        Resolution,
-        RefreshRate,
-        Response,
-        TechSync,
-        Bright,
-        Contrast,
-        Switch,
-        RGB,
-        Type,
-        DPI
+        description,
+        maintenance_time
       } = req.body;
       //if (!images) return res.status(400).json({ msg: "No image upload" });
       const product = await Products.findOne({ product_id });
@@ -106,28 +86,8 @@ const productCtrl = {
         brand,
         images,
         category,
-        maintenance_time,
-        sold,
-        CPU,
-        Screen,
-        RAM,
-        GPU,
-        Material,
-        DataStorage,
-        ConnectionType,
-        Weight,
-        Color,
-        Panel,
-        Resolution,
-        RefreshRate,
-        Response,
-        TechSync,
-        Bright,
-        Contrast,
-        Switch,
-        RGB,
-        Type,
-        DPI
+        description,
+        maintenance_time
       });
       await newProduct.save();
       res.json({ msg: "Create a product" });
@@ -145,7 +105,7 @@ const productCtrl = {
   },
   updateProduct: async (req, res) => {
     try {
-      const { title, price, description, content, images, category, brand } =
+      const { title, price, description, maintenance_time, images, category, brand } =
         req.body;
       if (!images) return res.status(400).json({ msg: "No images uploaded" });
       await Products.findOneAndUpdate(
@@ -156,17 +116,8 @@ const productCtrl = {
             brand,
             images,
             category,
-            maintenance_time,
-            sold,
-            CPU,
-            Screen,
-            RAM,
-            GPU,
-            Material,
-            DataStorage,
-            ConnectionType,
-            Weight,
-            Color
+            description,
+            maintenance_time
           }
       );
       res.json({ msg: "Updated product" });

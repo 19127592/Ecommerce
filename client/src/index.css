@@ -34,7 +34,46 @@ button {
   background: transparent;
   cursor: pointer;
 }
+.customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+.customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.customers tr:hover {
+  background-color: #ddd;
+}
+.img-item {
+  width: 100px;
+  height: 100px;
+}
+.customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+}
+.trash-can {
+  width: 18px;
+  height: 18px;
+}
+
+.trash-can:hover {
+  cursor: pointer;
+}
 /*---------Header------------*/
 @import url("./components/header/header.css");
 
@@ -57,3 +96,10 @@ button {
 @import url("./components/mainpage/Cart/Cart.css");
 
 @import url("./components/mainpage/Checkout/Checkout.css");
+
+@import url("./components/mainpage/Admin/HandleProduct/CreateProduct.css");
+@import url("./components/mainpage/Admin/HandleProduct/UserManagement.css");
+
+@import url("./components/mainpage/Account/PasswordChange/changepassword.css");
+
+@import url("./components/footer/Footer.css");
