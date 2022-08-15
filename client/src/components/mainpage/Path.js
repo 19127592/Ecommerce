@@ -35,6 +35,9 @@ import products from './HomePage/Products/products'
 import UserManagement from './Admin/HandleProduct/UserManagement'
 import ProductManagement from './Admin/HandleProduct/ProductManagement'
 
+import TermOfUse from '../pages/TermOfUse';
+import Warranty from '../pages/Warranty';
+
 export default function Path() {
     const state = useContext(GlobalState)
     const [isLogged] = state.userAPI.isLogged
@@ -68,7 +71,10 @@ export default function Path() {
             <Route path='/user-management' exact component={isAdmin ? UserManagement : NotFound}/>
             <Route path='/product-management' exact component={isAdmin ? ProductManagement : NotFound}/>
             <Route path='/edit/:id' exact component={isAdmin ? CreateProduct : NotFound}/>
-            
+
+            <Route path='/terms-of-use' exact component={TermOfUse}/>
+            <Route path='/warranty-policy' exact component={Warranty}/>
+
             <Route path="*" exact component={NotFound} />
         </Switch>
     )

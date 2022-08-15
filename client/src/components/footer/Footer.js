@@ -72,7 +72,7 @@ export default function Footer() {
     <>
       <footer className="Footer">
       <div className= "Footer1"> 
-                    <div>Chính sách của chúng tôi</div>
+      <Link to="/terms-of-use"><div>Chính sách của chúng tôi</div></Link>
                             Chính sách bảo hành
                 </div>
                 <div   div className= "Footer2">

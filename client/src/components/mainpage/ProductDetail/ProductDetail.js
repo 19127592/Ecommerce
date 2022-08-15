@@ -55,14 +55,26 @@ export default function ProductDetail() {
         return (
         
             <div>
-                <div>Tên sản phẩm: {ProductDetail.title}</div>
-                <img src={ProductDetail.images.url} alt="" />
-                <div>Giá: {priceWithCommas(ProductDetail.price)} đ</div>
-                <div>Thương hiệu: {ProductDetail.brand}</div>
-                <div>Bảo hành: {ProductDetail.maintenance_time} tháng</div>
-                <div>Mô tả:</div>
-                <div>{ProductDetail.description}</div>
-                <Link id="btn-buy" to="/" onClick={() => addToCart(ProductDetail)}>Buy</Link>
+                <div className='detail1'>
+                    <div className='detail2'>
+                        <img src={ProductDetail.images.url} alt="" />
+                    </div>
+                    <div className='infordetail'>
+                        <h3>{ProductDetail.title}</h3>
+                        <div className='price'>
+                            <h1>Giá: {priceWithCommas(ProductDetail.price)} đ</h1>
+                        </div>
+                        <div className='detail3'>
+                            <h5>Thương hiệu: {ProductDetail.brand}</h5>
+                            <h5>Bảo hành: {ProductDetail.maintenance_time} tháng</h5>
+                            <h5>Mô tả:</h5>
+                            <p>{ProductDetail.description}</p>
+                            <div className='btn'>
+                                <Link id="btn-buy1" to="/" onClick={() => addToCart(ProductDetail)}>Buy</Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
