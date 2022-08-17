@@ -7,7 +7,7 @@ export default function Homepage() {
     const [products] = state.productsAPI.products
     const [search, setSearch] = state.productsAPI.search
     const [users] = state.userAPI.users
-    console.log(products)
+    var [numCount1,numCount2,numCount3,numCount4,numCount5] = [0,0,0,0,0]
     return (
         <>
         <div>DÁN MÀN HÌNH</div>
@@ -15,66 +15,81 @@ export default function Homepage() {
             {
                 products.map(product => {
                     if (product.category == 'screen protector'){
-                        console.log(product)
-                        return <ProductItem key={product._id} product={product}/>
+                        if (numCount1 < 4){
+                            numCount1+=1
+                            return <ProductItem key={product._id} product={product}/>
+                        }
                     }
                     
                 })
                 
             }
+            <div><Link to="/collection/screen protector">Xem thêm</Link></div>
         </div>
-        <div><Link to="/collection/screen protector">Xem thêm</Link></div>
 
         <div>CÁP, SẠC ĐIỆN THOẠI</div>
         <div className='products'>
             {
                 products.map(product => {
                     if (product.category == 'phone charger'){
-                        return <ProductItem key={product._id} product={product}/>
+                        if (numCount2 < 4){
+                            numCount2+=1
+                            return <ProductItem key={product._id} product={product}/>
+                        }
                     }
                     
                 })
             }
+            <div><Link to="/collection/phone charger">Xem thêm</Link></div>
         </div>
-        <div><Link to="/collection/phone charger">Xem thêm</Link></div>
 
         <div>PIN DỰ PHÒNG</div>
         <div className='products'>
             {
                 products.map(product => {
                     if (product.category == 'backup charger'){
-                        return <ProductItem key={product._id} product={product}/>
+                        if (numCount3 < 4){
+                            numCount3+=1
+                            return <ProductItem key={product._id} product={product}/>
+                        }
                     }
                     
                 })
             }
+            <div><Link to="/collection/backup charger">Xem thêm</Link></div>
         </div>
-        <div><Link to="/collection/backup charger">Xem thêm</Link></div>
 
         <div>TAI NGHE</div>
         <div className='products'>
             {
                 products.map(product => {
                     if (product.category == 'headphone'){
-                        return <ProductItem key={product._id} product={product}/>
+                        if (numCount4 < 4){
+                            numCount4+=1
+                            return <ProductItem key={product._id} product={product}/>
+                        }
                     }
                     
                 })
             }
+            <div><Link to="/collection/headphone">Xem thêm</Link></div>
         </div>
-        <div><Link to="/collection/headphone">Xem thêm</Link></div>
 
         <div>ỐP LƯNG</div>
         <div className='products'>
             {
                 products.map(product => {
                     if (product.category == 'phone case'){
-                        return <ProductItem key={product._id} product={product}/>
+                        if (numCount5 < 4){
+                            numCount5+=1
+                            return <ProductItem key={product._id} product={product}/>
+                        }
                     }
+                    
                 })
             }
+            <div><Link to="/collection/phone case">Xem thêm</Link></div>
         </div>
-        <div><Link to="/collection/phone case">Xem thêm</Link></div>
         </>
     )
 }
