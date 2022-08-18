@@ -51,3 +51,17 @@
   .select:hover::after {
     color: teal;
   }
+
+  .title-home {
+    background-color: crimson;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    text-align:center;
+  }
+
+  .btn-more {
+    text-align: right;
+    margin-top: -20px;
+    margin-bottom: 20px;
+  }

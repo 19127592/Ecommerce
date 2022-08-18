@@ -10,7 +10,7 @@ export default function Homepage() {
     var [numCount1,numCount2,numCount3,numCount4,numCount5] = [0,0,0,0,0]
     return (
         <>
-        <div>DÁN MÀN HÌNH</div>
+        <div className='title-home'>DÁN MÀN HÌNH</div>
         <div className='products'>
             {
                 products.map(product => {
@@ -24,10 +24,11 @@ export default function Homepage() {
                 })
                 
             }
-            <div><Link to="/collection/screen protector">Xem thêm</Link></div>
+            
         </div>
+        <div className='btn-more'><Link to="/collection/screen protector">Xem thêm ➤</Link></div>
 
-        <div>CÁP, SẠC ĐIỆN THOẠI</div>
+        <div className='title-home'>CÁP, SẠC ĐIỆN THOẠI</div>
         <div className='products'>
             {
                 products.map(product => {
@@ -40,10 +41,11 @@ export default function Homepage() {
                     
                 })
             }
-            <div><Link to="/collection/phone charger">Xem thêm</Link></div>
+            
         </div>
+        <div className='btn-more'><Link to="/collection/phone charger">Xem thêm ➤</Link></div>
 
-        <div>PIN DỰ PHÒNG</div>
+        <div className='title-home'>PIN DỰ PHÒNG</div>
         <div className='products'>
             {
                 products.map(product => {
@@ -56,10 +58,11 @@ export default function Homepage() {
                     
                 })
             }
-            <div><Link to="/collection/backup charger">Xem thêm</Link></div>
+            
         </div>
+        <div className='btn-more'><Link to="/collection/backup charger">Xem thêm ➤</Link></div>    
 
-        <div>TAI NGHE</div>
+        <div className='title-home'>TAI NGHE</div>
         <div className='products'>
             {
                 products.map(product => {
@@ -72,10 +75,11 @@ export default function Homepage() {
                     
                 })
             }
-            <div><Link to="/collection/headphone">Xem thêm</Link></div>
-        </div>
 
-        <div>ỐP LƯNG</div>
+        </div>
+        <div className='btn-more'><Link to="/collection/headphone">Xem thêm ➤</Link></div>
+
+        <div className='title-home'>ỐP LƯNG</div>
         <div className='products'>
             {
                 products.map(product => {
@@ -88,8 +92,9 @@ export default function Homepage() {
                     
                 })
             }
-            <div><Link to="/collection/phone case">Xem thêm</Link></div>
+
         </div>
+        <div className='btn-more'><Link to="/collection/phone case">Xem thêm ➤</Link></div>
         </>
     )
 }
